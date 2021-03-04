@@ -1,0 +1,63 @@
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!--Amdin page-->
+    <definition name="baseAdminlayout" template="/WEB-INF/jsp/admin/layouts/mainLayout.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="content" value=""/>
+        <put-attribute name="sidebar" value="/WEB-INF/jsp/admin/baseFragments/sideBar.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/jsp/admin/baseFragments/header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/jsp/admin/baseFragments/footer.jsp"/>
+    </definition>
+    <definition name="admin/login" extends="baseAdminlayout">
+        <put-attribute name="title" value="Admin - login"/>
+        <put-attribute name="sidebar" value=""/>
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/pages/login.jsp"/>
+    </definition>
+    <definition name="admin/categories" extends="baseAdminlayout">
+        <put-attribute name="title" value="Admin - Categories"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/pages/listCategory.jsp"/>
+    </definition>
+    <definition name="admin/addCategory" extends="baseAdminlayout">
+        <put-attribute name="title" value="Admin - Add a category"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/pages/addCategory.jsp"/>
+    </definition>
+    <definition name="admin/listProduct" extends="baseAdminlayout">
+        <put-attribute name="title" value="Admin - Products"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/pages/listProduct.jsp"/>
+    </definition>
+    <definition name="admin/addProduct" extends="baseAdminlayout">
+        <put-attribute name="title" value="Admin - Add a product"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/pages/addProduct.jsp"/>
+    </definition>
+    <definition name="admin/editProduct" extends="baseAdminlayout">
+        <put-attribute name="title"/>
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/pages/editProduct.jsp"/>
+    </definition>
+    <!--End Amdin page-->
+
+    <!--Estore page-->
+    <definition name="baseEstorelayout" template="/WEB-INF/jsp/store/layouts/mainLayout.jsp">
+        <put-attribute name="header" value="/WEB-INF/jsp/store/baseFragments/header.jsp"/>
+        <put-attribute name="content" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/jsp/store/baseFragments/footer.jsp"/>
+    </definition>
+    <definition name="estore/homepage" extends="baseEstorelayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/store/pages/homepage.jsp"/>
+    </definition>
+    <definition name="estore/listCategoryBySlug" extends="baseEstorelayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/store/pages/listCategoryBySlug.jsp"/>
+    </definition>
+    <definition name="estore/detailProduct" extends="baseEstorelayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/store/pages/detailProduct.jsp"/>
+    </definition>
+    <definition name="estore/cart" extends="baseEstorelayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/store/pages/cart.jsp"/>
+    </definition>
+<!--    <definition name="eshop/404error" extends="baseEshoplayout">-->
+<!--        <put-attribute name="content" value="/WEB-INF/jsp/eshop/404error.jsp"/>-->
+<!--    </definition>-->
+    <!--End Eshop page-->
+
+</tiles-definitions>
